@@ -5,11 +5,15 @@
     <listener class-name="MohamedHafdi.TestComponents.Listeners"/>
   </listeners>
   <test thread-count="5" parallel="tests" name="Error Validation Test(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="Automation"/>
+      </run>
+    </groups>
     <classes>
       <class name="MohamedHafdi.Tests.ErrorValidation">
         <methods>
           <include name="teardown"/>
-          <include name="productErrorValidation"/>
           <include name="launchApplication"/>
           <include name="logingErrorValidation"/>
         </methods>

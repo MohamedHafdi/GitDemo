@@ -66,7 +66,7 @@
   </dependencies>
 <profiles>
 <profile>
-<id>Regression</id>
+<id>Cart_Page</id>
 	<build>
 	    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
 	      <plugins>
@@ -76,7 +76,7 @@
 	        <version>3.5.3</version>
 	        <configuration>
 	          <suiteXmlFiles>
-	            <suiteXmlFile>TestSuites/testng.xml</suiteXmlFile>
+	            <suiteXmlFile>TestSuites/TC2.xml</suiteXmlFile>
 	          </suiteXmlFiles>
 	        </configuration>
 	      </plugin>
@@ -86,7 +86,7 @@
 </profile>
 
 <profile>
-<id>Purchase</id>
+<id>ORDERS_Page</id>
 	<build>
 	    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
 	      <plugins>
@@ -96,7 +96,7 @@
 	        <version>3.5.3</version>
 	        <configuration>
 	          <suiteXmlFiles>
-	            <suiteXmlFile>TestSuites/PurchaseOrder.xml</suiteXmlFile>
+	            <suiteXmlFile>TestSuites/TC7.xml</suiteXmlFile>
 	          </suiteXmlFiles>
 	        </configuration>
 	      </plugin>
@@ -105,7 +105,7 @@
 	</build>
 </profile>
 <profile>
-<id>ErrorValidation</id>
+<id>Invalid_Authentication</id>
 	<build>
 	    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
 	      <plugins>
@@ -115,7 +115,7 @@
 	        <version>3.5.3</version>
 	        <configuration>
 	          <suiteXmlFiles>
-	            <suiteXmlFile>TestSuites/ErrorValidationTests.xml</suiteXmlFile>
+	            <suiteXmlFile>TestSuites/TC17.xml</suiteXmlFile>
 	          </suiteXmlFiles>
 	        </configuration>
 	      </plugin>
@@ -124,6 +124,25 @@
 	</build>
 </profile>
 
+<profile>
+<id>All_Tests</id>
+	<build>
+	    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+	      <plugins>
+	      <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-surefire-plugin</artifactId>
+	        <version>3.5.3</version>
+	        <configuration>
+	          <suiteXmlFiles>
+	            <suiteXmlFile>TestSuites/Tests.xml</suiteXmlFile>
+	          </suiteXmlFiles>
+	        </configuration>
+	      </plugin>
+	      </plugins>
+	    </pluginManagement>
+	</build>
+</profile>
 </profiles>
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

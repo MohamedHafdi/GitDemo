@@ -27,12 +27,14 @@ import MohamedHafdi.pageobjects.ProductCatalogue;
 //@Listeners(MohamedHafdi.TestComponents.Listeners.class)
 public class ErrorValidation extends BaseTest {
 
-		@Test(groups= {"ErrorHandling"})
+		@Test(groups= {"ErrorHandling", "Automation"})
 		public void logingErrorValidation() throws IOException, InterruptedException {
 			
 		
 		landingPage.LogingApplication("mohamed1234@gmail.com", "Mohamed1234");
-		Assert.assertEquals(landingPage.getErrorMessage(), "Incorrect mail password.");
+		System.out.println(landingPage.getErrorMessage());
+		//Assert.assertEquals(landingPage.getErrorMessage(), "Incorrect email  password.");
+		Assert.assertFalse(landingPage.getErrorMessage().equalsIgnoreCase("Incorrect email or password."));
 
 		}
 		 

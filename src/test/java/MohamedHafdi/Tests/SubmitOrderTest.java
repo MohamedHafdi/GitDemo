@@ -57,7 +57,7 @@ public class SubmitOrderTest extends BaseTest {
 		}
 		
 		
-		@Test(dataProvider="getData", groups ={"Test"})
+		@Test(dataProvider="getData", groups ={"Test", "Automation"})
 		public void CartPage(HashMap<String, String> input) throws InterruptedException {
 			ProductCatalogue productCatalogue = landingPage.LogingApplication(input.get("email"), input.get("password"));
 			List<WebElement> products = productCatalogue.getProducts();
@@ -72,7 +72,7 @@ public class SubmitOrderTest extends BaseTest {
 	
 		}
 		
-		@Test(dependsOnMethods= {"submitOrder"}, dataProvider="getData", groups= {"purchaseOrder"})
+		@Test(dependsOnMethods= {"submitOrder"}, dataProvider="getData", groups= {"purchaseOrder", "Automation"})
 		public void orderHistoryTest(HashMap<String, String> input) throws InterruptedException {
 			
 			String produtWanted = input.get("productName");

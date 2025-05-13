@@ -34,7 +34,7 @@ public class LandingPage extends AbstractComponent {
 	WebElement submit;
 	
 	
-	@FindBy(css="[class*='flyInOut'")
+	@FindBy(css="[class*='flyInOut']")
 	WebElement errorMessage;
 	
 	public ProductCatalogue LogingApplication(String Email, String Password) {
